@@ -3,7 +3,7 @@
 
 @section('content')
 
-    <div class="container">
+    <div class="container product-container mt-5">
         <div class="row">
             @foreach ($products as $product)
                 @include('product._card')
