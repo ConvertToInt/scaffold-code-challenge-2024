@@ -21,22 +21,21 @@ class DatabaseSeeder extends Seeder
 
         // Create categories
         Category::factory()
-            ->count(8)
+            ->count(6)
             ->create();
 
         // Create subcategories
         Category::all()->each(function ($category) {
             Category::factory()
-            ->count(6)
+            ->count(3)
             ->create([
                 'parent_id' => $category->id
             ]);
         });
 
         // Create products
-        // Product::factory()
-        //     ->has(Category::factory()->count(5)->create())
-        //     ->count(5)
-        //     ->create();
+        Product::factory()
+            ->count(30)
+            ->create();
     }
 }
