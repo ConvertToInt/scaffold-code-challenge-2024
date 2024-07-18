@@ -19,7 +19,7 @@ class ProductFactory extends Factory
      */
     public function definition(): array
     {
-        $title = fake()->sentence(3);
+        $title = ucfirst(implode(' ', fake()->words(3)));
         $slug = Str::slug($title);
 
         // Could be replaced with some sort of helper function getSubcategories()

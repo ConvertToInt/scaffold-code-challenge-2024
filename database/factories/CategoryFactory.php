@@ -18,7 +18,7 @@ class CategoryFactory extends Factory
      */
     public function definition(): array
     {
-        $name = fake()->sentence(3);
+        $name = ucfirst(implode(' ', fake()->words(2)));
         $slug = Str::slug($name);
 
         return [

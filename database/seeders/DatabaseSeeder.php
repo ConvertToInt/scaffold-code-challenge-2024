@@ -35,7 +35,7 @@ class DatabaseSeeder extends Seeder
 
         // Create products
         Product::factory()
-            ->count(30)
+            ->count(50)
             ->create();
     }
 }
