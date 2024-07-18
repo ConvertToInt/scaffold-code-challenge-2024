@@ -9,7 +9,10 @@
     </div>
     <div class="col-9">
         <div class="container product-container mt-5">
-            <h1>All Products_</h1>
+            <div class="d-flex justify-content-between">
+                <h1>All Products_</h1>
+                <a class="text-black" href="{{ url()->previous() }}">Go back</a>
+            </div>
             <div class="row">
                 @foreach ($products as $product)
                     @include('product._card')
