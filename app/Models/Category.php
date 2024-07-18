@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Collection;
 use App\Models\Product;
 
 class Category extends Model
@@ -28,5 +29,16 @@ class Category extends Model
     public function products()
     {
         return $this->hasMany(Product::class);
+    }
+
+    public function getAllSubcategoryProducts(): Collection
+    {
+        $products = new Collection();
+
+        foreach ($this->subcategories as $subcategory) {
+            $products = $products->merge($subcategory->products);
+        }
+
+        return $products;
     }
 }
