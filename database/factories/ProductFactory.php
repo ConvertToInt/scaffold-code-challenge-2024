@@ -30,7 +30,8 @@ class ProductFactory extends Factory
             'slug' => $slug,
             'desc' => fake()->sentence(),
             'price' => fake()->randomNumber(3, false),
-            'category_id' => $subcategories->random()->id
+            'category_id' => $subcategories->random()->id,
+            'img_url' => fake()->imageUrl(width: 600, height: 600)
         ];
     }
 }

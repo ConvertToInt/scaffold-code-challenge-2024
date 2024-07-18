@@ -14,7 +14,7 @@
             </div>
             <div class="row mt-5">
                 <div class="col-6">
-                    <img src="https://budgetstockphoto.com/samples/pics/dice.jpg" class="img-fluid" alt="Responsive image">
+                    <img src="{{$product->img_url}}" class="img-fluid" alt="Responsive image">
                 </div>
                 <div class="col-6">
                     <h2 class="my-4">£{{$product->price}}</h2>
