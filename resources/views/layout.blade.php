@@ -54,7 +54,7 @@
         </button>
       
         <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-            <form class="form-inline my-2 my-lg-0" action="{{ route('search') }}" method="GET">
+            <form class="form-inline my-2 my-lg-0" action="{{ route('product_search')}}" method="GET">
                 <input class="form-control mr-sm-2" name="product" placeholder="Search for products..." aria-label="Search">
             </form>
         </div>

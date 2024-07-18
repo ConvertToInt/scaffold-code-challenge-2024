@@ -6,4 +6,4 @@ use App\Http\Controllers\CategoryController;
 
 Route::get('/', [ProductController::class, 'index'])->name('products_index');
 Route::get('/category/{category:slug}', [CategoryController::class, 'show'])->name('category_show');
-Route::get('/search', [ProductController::class, 'search'])->name('search');
+Route::get('/search', [ProductController::class, 'search'])->name('product_search');
