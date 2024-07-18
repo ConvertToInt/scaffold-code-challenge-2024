@@ -11,6 +11,8 @@
         </div>
     </div>   
 
-    {{ $products->links() }}
+    <div class="container links-container">
+        {{ $products->links() }}
+    </div>
 
 @endsection
