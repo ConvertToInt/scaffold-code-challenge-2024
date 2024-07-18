@@ -14,14 +14,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
-
         // Create categories
         Category::factory()
-            ->count(6)
+            ->count(8)
             ->create();
 
         // Create subcategories
@@ -35,7 +30,7 @@ class DatabaseSeeder extends Seeder
 
         // Create products
         Product::factory()
-            ->count(50)
+            ->count(200)
             ->create();
     }
 }
