@@ -19,6 +19,16 @@ class ProductController extends Controller
         ]);
     }
 
+    public function show(Product $product)
+    {
+        $categories = Category::whereNull('parent_id')->get();
+
+        return view('product.show', [
+            'product' => $product,
+            'categories' => $categories
+        ]);
+    }
+
     public function search(Request $request)
     {
         $categories = Category::whereNull('parent_id')->get();
