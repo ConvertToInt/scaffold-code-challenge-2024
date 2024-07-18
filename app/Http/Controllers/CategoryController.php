@@ -12,15 +12,17 @@ class CategoryController extends Controller
     {
         // Fetch all top level categories
         $categories = Category::whereNull('parent_id')->get();
-        // Fetch all subcategories for the given Category
-        $subcategories = $category->subcategories;
-        // Get all products within the given subcategories
-        $products = $category->getAllSubcategoryProducts()->paginate(15);
+
+        // If parent_id is null, the category is a base category, otherwise it is a subcategory
+        if (is_null($category->parent_id)) {
+            $products = $category->getAllSubcategoryProducts()->paginate(15);
+        } else {
+            $products = $category->products()->paginate(15);
+        }
 
         return view('category.show', [
             'currentCategory' => $category,
             'categories' => $categories,
-            'subcategories' => $subcategories,
             'products' => $products
         ]);
     }
