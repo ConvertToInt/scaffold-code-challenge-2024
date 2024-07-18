@@ -10,15 +10,12 @@ class ProductController extends Controller
 {
     public function index()
     {
-        $products = Product::paginate(15);
         $categories = Category::whereNull('parent_id')->get();
-        $subcategories = Category::whereNotNull('parent_id')->get();
-
+        $products = Product::paginate(15);
 
         return view('product.index', [
             'products' => $products,
             'categories' => $categories,
-            'subcategoeies' => $subcategories
         ]);
     }
 }
