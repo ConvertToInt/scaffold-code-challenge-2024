@@ -31,14 +31,11 @@ class Category extends Model
         return $this->hasMany(Product::class);
     }
 
-    public function getAllSubcategoryProducts(): Collection
+    public function getAllSubcategoryProducts()
     {
-        $products = new Collection();
+        $subcategoryIds = $this->subcategories()->pluck('id');
 
-        foreach ($this->subcategories as $subcategory) {
-            $products = $products->merge($subcategory->products);
-        }
-
-        return $products;
+        // Fetch products where the category_id is in the subcategory IDs
+        return Product::whereIn('category_id', $subcategoryIds);
     }
 }
