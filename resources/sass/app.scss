@@ -13,4 +13,11 @@
 
 .product-container {
     max-width: 65em;
+
+    .product-price{
+        float:right;
+        font-weight: bold;
+        font-size: 20px;
+        color: #FFA400;
+    }
 }

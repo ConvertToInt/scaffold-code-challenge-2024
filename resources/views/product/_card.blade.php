@@ -3,8 +3,7 @@
         <img class="card-img-top" src="https://budgetstockphoto.com/samples/pics/dice.jpg" alt="Card image cap">
         <div class="card-body" style="">
           <h5 class="card-title"><strong>{{$product->title}}</strong></h5>
-          <p class="card-text">{{$product->desc}}</p>
-          <p class="card-text"><strong>£{{$product->price}}</strong></p>
+          <p class="card-text product-price"><strong>£{{$product->price}}</strong></p>
         </div>
     </div>
 </div>
