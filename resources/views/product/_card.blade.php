@@ -1,5 +1,5 @@
 <div class="col-12 col-sm-6 col-xl-4">
-  <a href="{{route('product_show', $product->slug)}}">
+  <a class="text-decoration-none" href="{{route('product_show', $product->slug)}}">
     <div class="card mt-5 mx-auto" style="width: 16rem;">
         <img class="card-img-top" src="{{$product->img_url}}" alt="Card image cap">
         <div class="card-body" style="">

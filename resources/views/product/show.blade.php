@@ -17,11 +17,15 @@
                     <img src="{{$product->img_url}}" class="img-fluid" alt="Responsive image">
                 </div>
                 <div class="col-6">
-                    <h2 class="my-4">£{{$product->price}}</h2>
-                    <p>Description: {{$product->desc}}</p>
+                    <h2 class="my-4">{{$product->title}}</h2>
+                    <h2>£{{$product->price}}</h2>
                 </div>
             </div>
-        </div>  
+            <h2 class="ml-3 mt-5">Description:</h2>
+            <p>{{$product->desc}}</p>
+            <h2 class="ml-3 mt-5">Category:</h2>
+            <p>{{$product->category->name}}</p>
+        </div>
     </div>
 </div>
 
