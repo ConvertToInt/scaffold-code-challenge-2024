@@ -20,6 +20,7 @@
     background-color: #414141;
     height: 100%;
     color: #FFA400;
+    min-width: 220px;
 
     .category-textbox {
         position: sticky;
@@ -39,6 +40,11 @@
     .fa-arrow-down {
         margin-left: 10px;
         margin-top: 10px;
+        cursor: pointer;
+    }
+
+    .fa-arrows-up-down {
+        margin-top: 20px;
         cursor: pointer;
     }
 

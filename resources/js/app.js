@@ -12,3 +12,13 @@ document.querySelectorAll('.toggle-subcategories').forEach(function(button) {
         }
     });
 });
+
+
+document.querySelectorAll('.toggle-categories').forEach(function(button) {
+    button.addEventListener('click', function() {
+        const categoryList = document.querySelector('.category-list');
+        if (categoryList) {
+            categoryList.classList.toggle('d-none');
+        }
+    });
+});
