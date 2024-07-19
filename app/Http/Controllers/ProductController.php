@@ -14,7 +14,7 @@ class ProductController extends Controller
         $sortOn = $request->input('sortOn', 'title'); // Set what field to sort on, default to title
 
         $categories = Category::whereNull('parent_id')->get();
-        $products = Product::orderBy($sortOn, $sortBy)->paginate(15);
+        $products = Product::orderBy($sortOn, $sortBy)->paginate(9);
 
         return view('product.index', [
             'products' => $products,
@@ -42,7 +42,7 @@ class ProductController extends Controller
         // Search in the title and body columns from the posts table
         $products = Product::query()
             ->where('title', 'LIKE', "%{$search}%")
-            ->paginate(15);
+            ->paginate(9);
     
         // Return the search view with the resluts compacted
         return view('product.search', [
