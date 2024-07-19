@@ -13,6 +13,7 @@
                 <h1>{{$currentCategory->name}}_</h1>
                 <a class="text-black" href="{{ url()->previous() }}">Go back</a>
             </div>
+            @include('product._sort-btns')
             <div class="row">
                 @foreach ($products as $product)
                     @include('product._card')

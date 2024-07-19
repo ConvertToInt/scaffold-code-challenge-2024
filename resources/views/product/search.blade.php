@@ -1,6 +1,5 @@
 @extends('layout')
 
-
 @section('content')
 
 <div class="row">
@@ -13,6 +12,7 @@
                 <h1>Results for '{{$searchTerm}}'</h1>
                 <a class="text-black" href="{{ url()->previous() }}">Go back</a>
             </div>
+            @include('product._sort-btns')
             <div class="row">
                 @foreach ($products as $product)
                     @include('product._card')

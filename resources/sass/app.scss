@@ -7,6 +7,10 @@
 // Bootstrap
 @import 'bootstrap/scss/bootstrap';
 
+body {
+    overflow-x: hidden;
+}
+
 .navbar {
     background-color: #2E2D2C;
 }
@@ -61,5 +65,14 @@
         font-weight: bold;
         font-size: 20px;
         color: #FFA400;
+    }
+
+    .sort-btns {
+        a {
+            color: #FFA400;
+            text-decoration: none;
+            font-size: 15px;
+        }
+        
     }
 }

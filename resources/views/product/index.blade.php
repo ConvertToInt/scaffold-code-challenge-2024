@@ -13,6 +13,7 @@
                 <h1>All Products_</h1>
                 <a class="text-black" href="{{ url()->previous() }}">Go back</a>
             </div>
+            @include('product._sort-btns')
             <div class="row">
                 @foreach ($products as $product)
                     @include('product._card')
@@ -20,7 +21,7 @@
             </div>
         </div>   
     
-        <div class="container links-container">
+        <div class="container links-container mt-5">
             {{ $products->links() }}
         </div>
     </div>

@@ -8,10 +8,13 @@ use App\Models\Category;
 
 class ProductController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
+        $sortBy = $request->input('sortBy', 'asc'); // Set what to sort by, default to ascending order
+        $sortOn = $request->input('sortOn', 'title'); // Set what field to sort on, default to title
+
         $categories = Category::whereNull('parent_id')->get();
-        $products = Product::paginate(15);
+        $products = Product::orderBy($sortOn, $sortBy)->paginate(15);
 
         return view('product.index', [
             'products' => $products,
