@@ -25,6 +25,10 @@
             <p>{{$product->desc}}</p>
             <h2 class="ml-3 mt-5">Category:</h2>
             <p>{{$product->category->name}}</p>
+            <h2 class="ml-3 mt-5">Dimensions:</h2>
+            <p>H: {{$product->height_in_cm}}cm x W: {{$product->width_in_cm}}cm</p>
+            <h2 class="ml-3 mt-5">Weight:</h2>
+            <p>{{$product->weight_in_grams}}g</p>
         </div>
     </div>
 </div>
